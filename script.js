@@ -28,8 +28,8 @@ const M=document.getElementById("M")
 const textarea=document.getElementById("text-area")
 let typing=""
 let keys=[A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
-
-
+let sentence="THIS SENTENCE TO TEACH YOU HOW TO CODE"
+let cursor=0;
 //add events listners
 document.addEventListener('keypress', keyPress);
 document.addEventListener('keyup', keyUp);
@@ -38,6 +38,8 @@ document.addEventListener('keyup', keyUp);
 ///define the fucntions for the events listners
 
 function keyUp(e) {
+    
+    cursor++;
     const keys=document.querySelectorAll(".key")
     for (let i = 0; i < keys.length; i++) {
      keys[i].style.backgroundColor = "rgb(255,200,200)";
@@ -50,7 +52,19 @@ function keyUp(e) {
       if(c>=97){
         c=c-32
       }
+      console.log(!sentence[cursor]==String.fromCharCode(c))
+      if(!(sentence[cursor]==String.fromCharCode(c))){
+       
+        typing +='<span style="color:red;">'
+      }
+     
         typing +=String.fromCharCode(c)
+        
+        if(!(sentence[cursor]==String.fromCharCode(c))){
+          typing +='</span>'
+        }
+        console.log(typing)
+        
           textarea.innerHTML=typing
       for(let i=65;i<65+keys.length;i++){
         if (e.keyCode==i|| e.keyCode==i+32){

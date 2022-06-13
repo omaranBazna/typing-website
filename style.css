@@ -7,8 +7,10 @@
     justify-content:center;
     text-align:center;
     border:5px solid black;
+    font-weight:800;
+    color:rgb(8, 187, 8);
   }
-  #sentense{
+  #sentence{
     background:rgb(230,230,230);
     border-radius:20px;
     height:80px;
@@ -17,6 +19,8 @@
     justify-content:center;
     text-align:center;
     border:5px solid black;
+   
+    font-weight:800;
   }
   .key{
     font-size:25px;
