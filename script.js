@@ -26,6 +26,7 @@ const B=document.getElementById("B")
 const N=document.getElementById("N")
 const M=document.getElementById("M")
 const textarea=document.getElementById("text-area")
+const sentenceEl=document.getElementById("sentence")
 let typing=""
 let keys=[A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
 let sentence="THIS SENTENCE TO TEACH YOU HOW TO CODE"
@@ -66,6 +67,11 @@ function keyUp(e) {
         console.log(typing)
         
           textarea.innerHTML=typing
+          let sen=""
+          for(let i=cursor+1;i<sentence.length;i++){
+            sen +=sentence[i]
+          }
+          sentenceEl.innerHTML=sen
       for(let i=65;i<65+keys.length;i++){
         if (e.keyCode==i|| e.keyCode==i+32){
             keys[i-65].style.backgroundColor="rgb(185,100,100)";
