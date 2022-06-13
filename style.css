@@ -1,0 +1,10 @@
+#text-area{
+    background:rgb(230,230,230);
+    border-radius:20px;
+    height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border:5px solid black;
+  }
