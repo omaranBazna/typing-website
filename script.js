@@ -54,7 +54,7 @@ function keyUp(e) {
     }
     }
     function keyPress(e) {
-
+  if(cursor<=sentence.length){
 
     //macth each key with its keyCode
       audio.play();
@@ -98,5 +98,10 @@ function keyUp(e) {
       }else{
         next.innerHTML="SPACE"
       }
+
+      if(!sentence[cursor+1]){
+        next.innerHTML="Finish"
+      }
     }
+  }
     
