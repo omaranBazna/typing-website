@@ -10,11 +10,18 @@
   }
   #sentense{
     background:rgb(230,230,230);
-  border-radius:20px;
-  height:80px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  border:5px solid black;
-}
+    border-radius:20px;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border:5px solid black;
+  }
+  .key{
+    font-size:25px;
+    line-height:25px;
+    padding:5px;
+    background:rgb(255,200,200);
+    text-align:center;
+  }
