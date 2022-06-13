@@ -28,17 +28,21 @@ const M=document.getElementById("M")
 
 const textarea=document.getElementById("text-area")
 const sentenceEl=document.getElementById("sentence")
+const total=document.getElementById("total")
+const score=document.getElementById("score")
+const next=document.getElementById("next")
 let typing=""
 let keys=[A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
 let sentence="THIS SENTENCE TO TEACH YOU HOW TO CODE"
 let cursor=0;
+let score_num=0;
 //add events listners
 document.addEventListener('keypress', keyPress);
 document.addEventListener('keyup', keyUp);
 
-
+total.innerHTML=`/${sentence.length}`
 const audio=new Audio("mp3.mp3")
-
+next.innerHTML=sentence[0]
 ///define the fucntions for the events listners
 
 function keyUp(e) {
@@ -50,13 +54,21 @@ function keyUp(e) {
     }
     }
     function keyPress(e) {
+
+
     //macth each key with its keyCode
       audio.play();
       let c=e.keyCode
+      if(c==32){
+        typing +=" "
+      }
       if(c>=97){
         c=c-32
       }
-      console.log(!sentence[cursor]==String.fromCharCode(c))
+      if((sentence[cursor]==String.fromCharCode(c))){
+        score_num +=1;
+        score.innerHTML=`${score_num}`
+      }
       if(!(sentence[cursor]==String.fromCharCode(c))){
        
         typing +='<span style="color:red;">'
@@ -80,6 +92,11 @@ function keyUp(e) {
             keys[i-65].style.backgroundColor="rgb(185,100,100)";
         
         }
+      }
+      if(sentence[cursor+1] !=" "){
+      next.innerHTML=sentence[cursor+1]
+      }else{
+        next.innerHTML="SPACE"
       }
     }
     
