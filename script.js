@@ -28,3 +28,8 @@ const M=document.getElementById("M")
 const textarea=document.getElementById("text-area")
 let typing=""
 let keys=[A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
+
+
+//add events listners
+document.addEventListener('keypress', keyPress);
+document.addEventListener('keyup', keyUp);
