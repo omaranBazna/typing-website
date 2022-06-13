@@ -33,3 +33,30 @@ let keys=[A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
 //add events listners
 document.addEventListener('keypress', keyPress);
 document.addEventListener('keyup', keyUp);
+
+
+///define the fucntions for the events listners
+
+function keyUp(e) {
+    const keys=document.querySelectorAll(".key")
+    for (let i = 0; i < keys.length; i++) {
+     keys[i].style.backgroundColor = "rgb(255,200,200)";
+    }
+    }
+    function keyPress(e) {
+    //macth each key with its keyCode
+     
+      let c=e.keyCode
+      if(c>=97){
+        c=c-32
+      }
+        typing +=String.fromCharCode(c)
+          textarea.innerHTML=typing
+      for(let i=65;i<65+keys.length;i++){
+        if (e.keyCode==i|| e.keyCode==i+32){
+            keys[i-65].style.backgroundColor="rgb(185,100,100)";
+        
+        }
+      }
+    }
+    
