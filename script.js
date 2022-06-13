@@ -25,6 +25,7 @@ const V=document.getElementById("V")
 const B=document.getElementById("B")
 const N=document.getElementById("N")
 const M=document.getElementById("M")
+
 const textarea=document.getElementById("text-area")
 const sentenceEl=document.getElementById("sentence")
 let typing=""
@@ -35,6 +36,8 @@ let cursor=0;
 document.addEventListener('keypress', keyPress);
 document.addEventListener('keyup', keyUp);
 
+
+const audio=new Audio("mp3.mp3")
 
 ///define the fucntions for the events listners
 
@@ -48,7 +51,7 @@ function keyUp(e) {
     }
     function keyPress(e) {
     //macth each key with its keyCode
-     
+      audio.play();
       let c=e.keyCode
       if(c>=97){
         c=c-32
