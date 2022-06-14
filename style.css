@@ -35,3 +35,8 @@
  .next{
     font-weight:800;
   }
+
+  body{
+    height:100vh;
+    background-image: linear-gradient(to bottom,rgb(176, 207, 35), rgb(221, 113, 94));
+  }
