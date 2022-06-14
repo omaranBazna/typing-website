@@ -17,12 +17,23 @@
         <!--  add sentense example -->
         <!-- use bootstrap nav tabs tp change between sentences-->
     <div class="row mt-5">
-      <div class="col-11 mx-auto " id="sentence">
+      <div class="col-11 mx-auto tab-nav " id="sentence">
         <ul class="nav nav-tabs">
-         <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="sentence1">sentence1</a></li>
-         <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="sentence1">sentence2</a></li>
-         <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="sentence1">sentence3</a></li>
+         <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#sentence1">sentence1</a></li>
+         <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#sentence2">sentence2</a></li>
+         <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#sentence3">sentence3</a></li>
         </ul>
+        <div class="tab-content">
+          <div class="tab-pane fade active show" id="sentence1" role="tabpanel" >
+            this is sentence 1
+          </div>
+          <div class="tab-pane fade" id="sentence2" role="tabpanel" >
+            this is sentence 2
+          </div>
+          <div class="tab-pane fade" id="sentence3" role="tabpanel" >
+            this is sentence 3
+          </div>
+        </div>
       </div>
     </div>
     
